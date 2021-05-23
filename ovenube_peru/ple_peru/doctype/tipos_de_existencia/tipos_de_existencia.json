@@ -1,0 +1,52 @@
+{
+ "allow_import": 1,
+ "autoname": "field:descripcion_tipos_existencia",
+ "creation": "2018-11-26 22:13:27.232279",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "codigo_tipos_existencia",
+  "descripcion_tipos_existencia"
+ ],
+ "fields": [
+  {
+   "fieldname": "codigo_tipos_existencia",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "C\u00f3digo Tipos de Existencia",
+   "reqd": 1
+  },
+  {
+   "fieldname": "descripcion_tipos_existencia",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Descripci\u00f3n Tipos de Existencia",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "modified": "2021-04-29 09:05:57.513412",
+ "modified_by": "Administrator",
+ "module": "PLE-PERU",
+ "name": "Tipos de Existencia",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "codigo_tipos_existencia,descripcion_tipos_existencia",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "descripcion_tipos_existencia"
+}

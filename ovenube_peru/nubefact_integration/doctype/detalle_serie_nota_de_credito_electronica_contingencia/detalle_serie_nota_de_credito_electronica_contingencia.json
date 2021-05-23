@@ -1,0 +1,44 @@
+{
+ "creation": "2018-10-28 11:47:42.788148",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "serie_nota_credito_contingencia",
+  "online",
+  "comprobante"
+ ],
+ "fields": [
+  {
+   "fieldname": "serie_nota_credito_contingencia",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Serie Nota de Cr\u00e9dito Electr\u00f3nica de Contingencia"
+  },
+  {
+   "default": "0",
+   "fieldname": "online",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "En linea"
+  },
+  {
+   "fieldname": "comprobante",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Comprobante",
+   "options": "Boleta\nFactura"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-29 09:06:35.015422",
+ "modified_by": "Administrator",
+ "module": "Nubefact Integration",
+ "name": "Detalle Serie Nota de Credito Electronica Contingencia",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

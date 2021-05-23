@@ -1,0 +1,1 @@
+cur_frm.add_fetch('unidad_medida_sunat', 'codigo_unidad_medida', 'codigo_sunat');

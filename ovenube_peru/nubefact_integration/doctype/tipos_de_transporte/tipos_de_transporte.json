@@ -1,0 +1,76 @@
+{
+ "autoname": "field:nombre_tipo_transporte",
+ "creation": "2018-12-24 14:37:02.860252",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "codigo_tipo_transporte",
+  "nombre_tipo_transporte"
+ ],
+ "fields": [
+  {
+   "fieldname": "codigo_tipo_transporte",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "C\u00f3digo Tipos de Transporte",
+   "reqd": 1
+  },
+  {
+   "fieldname": "nombre_tipo_transporte",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Nombre Tipos de Transporte",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "modified": "2021-04-29 09:05:01.502999",
+ "modified_by": "Administrator",
+ "module": "Nubefact Integration",
+ "name": "Tipos de Transporte",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "nombre_tipo_transporte",
+ "track_changes": 1
+}

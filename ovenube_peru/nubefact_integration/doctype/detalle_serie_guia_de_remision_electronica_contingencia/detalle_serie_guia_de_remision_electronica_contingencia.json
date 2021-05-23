@@ -1,0 +1,36 @@
+{
+ "creation": "2018-12-24 12:37:39.182607",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "serie_guia_remision_contingencia",
+  "online"
+ ],
+ "fields": [
+  {
+   "fieldname": "serie_guia_remision_contingencia",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Serie Gu\u00eda de Remisi\u00f3n Electr\u00f3nica Contingencia"
+  },
+  {
+   "default": "0",
+   "fieldname": "online",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "En linea"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-29 09:04:12.143901",
+ "modified_by": "Administrator",
+ "module": "Nubefact Integration",
+ "name": "Detalle Serie Guia de Remision Electronica Contingencia",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

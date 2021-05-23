@@ -1,0 +1,52 @@
+{
+ "allow_import": 1,
+ "autoname": "field:descripcion_tipo_pago",
+ "creation": "2016-02-18 17:25:25.956502",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "codigo_tipo_pago",
+  "descripcion_tipo_pago"
+ ],
+ "fields": [
+  {
+   "fieldname": "codigo_tipo_pago",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "C\u00f3digo Tipo de Pago",
+   "reqd": 1
+  },
+  {
+   "fieldname": "descripcion_tipo_pago",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Descripci\u00f3n Tipo de Pago",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "modified": "2021-04-29 09:08:08.680905",
+ "modified_by": "Administrator",
+ "module": "PLE-PERU",
+ "name": "Tipos de Pago",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "codigo_tipo_pago,descripcion_tipo_pago",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "descripcion_tipo_pago"
+}

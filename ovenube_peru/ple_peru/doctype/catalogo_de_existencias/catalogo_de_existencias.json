@@ -1,0 +1,52 @@
+{
+ "allow_import": 1,
+ "autoname": "field:descripcion_catalogo",
+ "creation": "2018-11-26 22:11:27.850800",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "codigo_catalogo",
+  "descripcion_catalogo"
+ ],
+ "fields": [
+  {
+   "fieldname": "codigo_catalogo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "C\u00f3digo Cat\u00e1logo de Existencias",
+   "reqd": 1
+  },
+  {
+   "fieldname": "descripcion_catalogo",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Descripci\u00f3n Cat\u00e1logo de Existencias",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "modified": "2021-04-29 09:06:07.062202",
+ "modified_by": "Administrator",
+ "module": "PLE-PERU",
+ "name": "Catalogo de Existencias",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "codigo_catalogo,descripcion_catalogo",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "descripcion_catalogo"
+}

@@ -1,0 +1,36 @@
+{
+ "creation": "2018-10-27 18:13:20.797811",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "serie_boleta",
+  "online"
+ ],
+ "fields": [
+  {
+   "fieldname": "serie_boleta",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Serie Boleta Electr\u00f3nica"
+  },
+  {
+   "default": "0",
+   "fieldname": "online",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "En linea"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-29 09:06:43.106568",
+ "modified_by": "Administrator",
+ "module": "Nubefact Integration",
+ "name": "Detalle Serie Boleta Electronica",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

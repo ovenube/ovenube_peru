@@ -1,0 +1,36 @@
+{
+ "creation": "2018-10-28 11:07:00.956805",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "serie_factura_contingencia",
+  "online"
+ ],
+ "fields": [
+  {
+   "fieldname": "serie_factura_contingencia",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Serie Factura Electr\u00f3nica Contingencia"
+  },
+  {
+   "default": "0",
+   "fieldname": "online",
+   "fieldtype": "Check",
+   "in_list_view": 1,
+   "label": "En linea"
+  }
+ ],
+ "istable": 1,
+ "modified": "2021-04-29 09:07:14.988605",
+ "modified_by": "Administrator",
+ "module": "Nubefact Integration",
+ "name": "Detalle Serie Factura Electronica Contingencia",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

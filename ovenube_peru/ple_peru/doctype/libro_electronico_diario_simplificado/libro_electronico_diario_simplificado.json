@@ -1,0 +1,74 @@
+{
+ "allow_copy": 1,
+ "creation": "2019-06-19 11:31:13.871063",
+ "doctype": "DocType",
+ "document_type": "Document",
+ "engine": "InnoDB",
+ "field_order": [
+  "year",
+  "periodo",
+  "company",
+  "ruc",
+  "primer_libro",
+  "get_data"
+ ],
+ "fields": [
+  {
+   "fieldname": "year",
+   "fieldtype": "Select",
+   "label": "A\u00f1o",
+   "options": "\n2018\n2019\n2020\n2021\n2022"
+  },
+  {
+   "fieldname": "periodo",
+   "fieldtype": "Select",
+   "label": "Periodo",
+   "options": "\nEnero\nFebrero\nMarzo\nAbril\nMayo\nJunio\nJulio\nAgosto\nSetiembre\nOctubre\nNoviembre\nDiciembre"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Compa\u00f1\u00eda",
+   "options": "Company"
+  },
+  {
+   "depends_on": "company",
+   "fetch_from": "company.tax_id",
+   "fieldname": "ruc",
+   "fieldtype": "Read Only",
+   "label": "RUC"
+  },
+  {
+   "default": "0",
+   "fieldname": "primer_libro",
+   "fieldtype": "Check",
+   "label": "Primer Libro Diario o Inicio de a\u00f1o"
+  },
+  {
+   "fieldname": "get_data",
+   "fieldtype": "Button",
+   "label": "Generar Libro Electr\u00f3nico Diario"
+  }
+ ],
+ "hide_toolbar": 1,
+ "issingle": 1,
+ "modified": "2021-04-29 09:01:08.005853",
+ "modified_by": "Administrator",
+ "module": "PLE-PERU",
+ "name": "Libro Electronico Diario Simplificado",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

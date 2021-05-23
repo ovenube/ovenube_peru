@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include ovenube_peru *.css
+recursive-include ovenube_peru *.csv
+recursive-include ovenube_peru *.html
+recursive-include ovenube_peru *.ico
+recursive-include ovenube_peru *.js
+recursive-include ovenube_peru *.json
+recursive-include ovenube_peru *.md
+recursive-include ovenube_peru *.png
+recursive-include ovenube_peru *.py
+recursive-include ovenube_peru *.svg
+recursive-include ovenube_peru *.txt
+recursive-exclude ovenube_peru *.pyc

@@ -1,0 +1,52 @@
+{
+ "allow_import": 1,
+ "autoname": "field:descripcion_unidad_medida",
+ "creation": "2018-11-29 14:45:11.729468",
+ "doctype": "DocType",
+ "document_type": "Setup",
+ "engine": "InnoDB",
+ "field_order": [
+  "codigo_unidad_medida",
+  "descripcion_unidad_medida"
+ ],
+ "fields": [
+  {
+   "fieldname": "codigo_unidad_medida",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "C\u00f3digo Unidad de Medida",
+   "reqd": 1
+  },
+  {
+   "fieldname": "descripcion_unidad_medida",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Descripci\u00f3n Unidad de Medida",
+   "reqd": 1,
+   "unique": 1
+  }
+ ],
+ "modified": "2021-04-29 09:05:28.289255",
+ "modified_by": "Administrator",
+ "module": "PLE-PERU",
+ "name": "Unidades de Medida",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "search_fields": "codigo_unidad_medida,descripcion_unidad_medida",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "descripcion_unidad_medida"
+}
