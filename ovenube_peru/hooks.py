@@ -24,7 +24,6 @@ fixtures = [
     "Tipos de Notas de Debito",
     "Tipos de Pago",
     "Tipos de Comprobante",
-    "Translation",
     "Custom Field",
     "Custom Script"
 ]
@@ -44,7 +43,22 @@ fixtures = [
 # page_js = {"page" : "public/js/file.js"}
 
 # include js in doctype views
-# doctype_js = {"doctype" : "public/js/doctype.js"}
+doctype_js = {
+    "Sales Invoice" : "public/js/sales_invoice.js",
+    "Company": "public/js/company.js",
+    "Customer": "public/js/customer.js",
+    "Supplier": "public/js/supplier.js",
+    "Delivery Note": "public/js/delivery_note.js",
+    "Fees": "public/js/fees.js",
+    "Item": "public/js/item.js",
+    "Purchase Invoice": "public/js/purchase_invoice.js",
+    "Purchase Order": "public/js/purchase_order.js",
+    "Purchase Receipt": "public/js/purchase_receipt.js",
+    "Stock Entry": "public/js/stock_entry.js",
+    "Student": "public/js/student.js",
+    "Supplier": "public/js/supplier.js",
+    "UOM": "public/js/uom.js",
+}
 # doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
