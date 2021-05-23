@@ -24,6 +24,9 @@ fixtures = [
     "Tipos de Notas de Debito",
     "Tipos de Pago",
     "Tipos de Comprobante",
+    "Departamento",
+    "Provincia",
+    "Distrito",
     "Custom Field",
     "Custom Script"
 ]
