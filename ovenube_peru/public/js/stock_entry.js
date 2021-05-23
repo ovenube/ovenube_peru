@@ -1,10 +1,5 @@
-//PERSONALIZACION
-cur_frm.add_fetch("tdx_c_solicitadopor", "employee_name", "tdx_c_solicitadonombre");
-cur_frm.add_fetch("tdx_c_autorizadopor", "employee_name", "tdx_c_autorizadonombre");
-cur_frm.add_fetch("tdx_c_ut_transportista", "tax_id", "tdx_c_ut_transportistan");
-cur_frm.add_fetch("tdx_c_ut_placa", "make", "tdx_c_ut_marca");
-//FIN PERSONALIZACION
 cur_frm.add_fetch('tipo_operacion', 'codigo_tipos_operacion', 'codigo_tipo_operacion');
+
 function filter_operacion(frm, cdt, cdn){
 	if (frm.doc.purpose == "Material Issue"){
 		cur_frm.set_query("tipo_operacion", function(){

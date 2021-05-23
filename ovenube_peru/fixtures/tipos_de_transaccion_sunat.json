@@ -1,0 +1,134 @@
+[
+ {
+  "codigo_tipo_transaccion": "1",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.087858",
+  "name": "VENTA INTERNA",
+  "nombre_tipo_transaccion": "VENTA INTERNA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "2",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.091684",
+  "name": "EXPORTACI\u00d3N",
+  "nombre_tipo_transaccion": "EXPORTACI\u00d3N",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "3",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.093032",
+  "name": "NO DOMICILIADO",
+  "nombre_tipo_transaccion": "NO DOMICILIADO",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "4",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.094438",
+  "name": "VENTA INTERNA \u2013 ANTICIPOS",
+  "nombre_tipo_transaccion": "VENTA INTERNA \u2013 ANTICIPOS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "5",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.095787",
+  "name": "VENTA ITINERANTE",
+  "nombre_tipo_transaccion": "VENTA ITINERANTE",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "6",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.097088",
+  "name": "FACTURA GU\u00cdA",
+  "nombre_tipo_transaccion": "FACTURA GU\u00cdA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "7",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.098322",
+  "name": "VENTA ARROZ PILADO",
+  "nombre_tipo_transaccion": "VENTA ARROZ PILADO",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "8",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.099578",
+  "name": "FACTURA - COMPROBANTE DE PERCEPCI\u00d3N",
+  "nombre_tipo_transaccion": "FACTURA - COMPROBANTE DE PERCEPCI\u00d3N",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "10",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.100915",
+  "name": "FACTURA - GU\u00cdA REMITENTE",
+  "nombre_tipo_transaccion": "FACTURA - GU\u00cdA REMITENTE",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "11",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.102208",
+  "name": "FACTURA - GU\u00cdA TRANSPORTISTA",
+  "nombre_tipo_transaccion": "FACTURA - GU\u00cdA TRANSPORTISTA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "12",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.103505",
+  "name": "BOLETA DE VENTA \u2013 COMPROBANTE DE PERCEPCI\u00d3N",
+  "nombre_tipo_transaccion": "BOLETA DE VENTA \u2013 COMPROBANTE DE PERCEPCI\u00d3N",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transaccion": "13",
+  "docstatus": 0,
+  "doctype": "Tipos de Transaccion Sunat",
+  "modified": "2021-05-24 00:41:22.104768",
+  "name": "GASTO DEDUCIBLE PERSONA NATURAL",
+  "nombre_tipo_transaccion": "GASTO DEDUCIBLE PERSONA NATURAL",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

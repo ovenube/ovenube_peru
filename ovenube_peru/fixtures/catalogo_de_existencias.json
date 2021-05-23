@@ -1,0 +1,35 @@
+[
+ {
+  "codigo_catalogo": "1",
+  "descripcion_catalogo": "NACIONES UNIDAS",
+  "docstatus": 0,
+  "doctype": "Catalogo de Existencias",
+  "modified": "2021-05-24 00:41:22.367197",
+  "name": "NACIONES UNIDAS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_catalogo": "3",
+  "descripcion_catalogo": "GS1 (EAN-UCC)",
+  "docstatus": 0,
+  "doctype": "Catalogo de Existencias",
+  "modified": "2021-05-24 00:41:22.369387",
+  "name": "GS1 (EAN-UCC)",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_catalogo": "9",
+  "descripcion_catalogo": "OTROS",
+  "docstatus": 0,
+  "doctype": "Catalogo de Existencias",
+  "modified": "2021-05-24 00:41:22.370850",
+  "name": "OTROS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

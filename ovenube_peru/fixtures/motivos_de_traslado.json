@@ -1,0 +1,101 @@
+[
+ {
+  "codigo_motivo_traslado": "01",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.172894",
+  "name": "VENTA",
+  "nombre_motivo_traslado": "VENTA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_motivo_traslado": "02",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.175224",
+  "name": "VENTA SUJETA A CONFIRMACI\u00d3N DEL COMPRADOR",
+  "nombre_motivo_traslado": "VENTA SUJETA A CONFIRMACI\u00d3N DEL COMPRADOR",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_motivo_traslado": "03",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.176577",
+  "name": "COMPRA",
+  "nombre_motivo_traslado": "COMPRA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_motivo_traslado": "04",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.178004",
+  "name": "VTRASLADO ENTRE ESTABLECIMIENTOS DE LA MISMA EMPRESA",
+  "nombre_motivo_traslado": "VTRASLADO ENTRE ESTABLECIMIENTOS DE LA MISMA EMPRESA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_motivo_traslado": "05",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.179297",
+  "name": "TRASLADO EMISOR ITINERANTE CP",
+  "nombre_motivo_traslado": "TRASLADO EMISOR ITINERANTE CP",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_motivo_traslado": "06",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.180526",
+  "name": "IMPORTACION",
+  "nombre_motivo_traslado": "IMPORTACION",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_motivo_traslado": "07",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.181785",
+  "name": "VEXPORTACION",
+  "nombre_motivo_traslado": "VEXPORTACION",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_motivo_traslado": "08",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.183028",
+  "name": "TRASLADO A ZONA PRIMARIA",
+  "nombre_motivo_traslado": "TRASLADO A ZONA PRIMARIA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_motivo_traslado": "10",
+  "docstatus": 0,
+  "doctype": "Motivos de Traslado",
+  "modified": "2021-05-24 00:41:22.184297",
+  "name": "OTROS",
+  "nombre_motivo_traslado": "OTROS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

@@ -1,0 +1,79 @@
+[
+ {
+  "codigo_tipo_documento": "-",
+  "descripcion_tipo_documento": "SIN DOCUMENTO",
+  "docstatus": 0,
+  "doctype": "Tipos de Documento de Identidad",
+  "modified": "2021-05-24 00:41:22.283243",
+  "name": "SIN DOCUMENTO",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_documento": "0",
+  "descripcion_tipo_documento": "OTROS TIPOS DE DOCUMENTOS",
+  "docstatus": 0,
+  "doctype": "Tipos de Documento de Identidad",
+  "modified": "2021-05-24 00:41:22.285484",
+  "name": "OTROS TIPOS DE DOCUMENTOS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_documento": "1",
+  "descripcion_tipo_documento": "DOCUMENTO NACIONAL DE IDENTIDAD (DNI)",
+  "docstatus": 0,
+  "doctype": "Tipos de Documento de Identidad",
+  "modified": "2021-05-24 00:41:22.286910",
+  "name": "DOCUMENTO NACIONAL DE IDENTIDAD (DNI)",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_documento": "6",
+  "descripcion_tipo_documento": "REGISTRO \u00daNICO DE CONTRIBUYENTES",
+  "docstatus": 0,
+  "doctype": "Tipos de Documento de Identidad",
+  "modified": "2021-05-24 00:41:22.288305",
+  "name": "REGISTRO \u00daNICO DE CONTRIBUYENTES",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_documento": "7",
+  "descripcion_tipo_documento": "PASAPORTE",
+  "docstatus": 0,
+  "doctype": "Tipos de Documento de Identidad",
+  "modified": "2021-05-24 00:41:22.289628",
+  "name": "PASAPORTE",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_documento": "4",
+  "descripcion_tipo_documento": "CARNET DE EXTRANJERIA",
+  "docstatus": 0,
+  "doctype": "Tipos de Documento de Identidad",
+  "modified": "2021-05-24 00:41:22.290978",
+  "name": "CARNET DE EXTRANJERIA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_documento": "A",
+  "descripcion_tipo_documento": "C\u00c9DULA DIPLOM\u00c1TICA DE IDENTIDAD",
+  "docstatus": 0,
+  "doctype": "Tipos de Documento de Identidad",
+  "modified": "2021-05-24 00:41:22.292271",
+  "name": "C\u00c9DULA DIPLOM\u00c1TICA DE IDENTIDAD",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

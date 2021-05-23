@@ -1,0 +1,24 @@
+[
+ {
+  "codigo_tipo_transporte": "01",
+  "docstatus": 0,
+  "doctype": "Tipos de Transporte",
+  "modified": "2021-05-24 00:41:22.201146",
+  "name": "TRANSPORTE P\u00daBLICO",
+  "nombre_tipo_transporte": "TRANSPORTE P\u00daBLICO",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipo_transporte": "02",
+  "docstatus": 0,
+  "doctype": "Tipos de Transporte",
+  "modified": "2021-05-24 00:41:22.203276",
+  "name": "TRANSPORTE PRIVADO",
+  "nombre_tipo_transporte": "TRANSPORTE PRIVADO",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

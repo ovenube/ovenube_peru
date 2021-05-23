@@ -1,1 +1,0 @@
-cur_frm.add_fetch('tdx_c_codigoproveedor', 'supplier_name', 'tdx_c_proveedor');

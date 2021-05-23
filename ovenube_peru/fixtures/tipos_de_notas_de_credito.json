@@ -1,0 +1,101 @@
+[
+ {
+  "codigo_notas_credito": "1",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.121686",
+  "name": "ANULACI\u00d3N DE LA OPERACI\u00d3N",
+  "nombre_notas_credito": "ANULACI\u00d3N DE LA OPERACI\u00d3N",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_credito": "2",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.123944",
+  "name": "ANULACI\u00d3N POR ERROR EN EL RUC",
+  "nombre_notas_credito": "ANULACI\u00d3N POR ERROR EN EL RUC",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_credito": "3",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.125201",
+  "name": "CORRECCI\u00d3N POR ERROR EN LA DESCRIPCI\u00d3N",
+  "nombre_notas_credito": "CORRECCI\u00d3N POR ERROR EN LA DESCRIPCI\u00d3N",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_credito": "4",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.126599",
+  "name": "DESCUENTO GLOBAL",
+  "nombre_notas_credito": "DESCUENTO GLOBAL",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_credito": "5",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.127912",
+  "name": "DESCUENTO POR \u00cdTEM",
+  "nombre_notas_credito": "DESCUENTO POR \u00cdTEM",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_credito": "6",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.129164",
+  "name": "DEVOLUCI\u00d3N TOTAL",
+  "nombre_notas_credito": "DEVOLUCI\u00d3N TOTAL",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_credito": "7",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.130443",
+  "name": "DEVOLUCI\u00d3N POR \u00cdTEM",
+  "nombre_notas_credito": "DEVOLUCI\u00d3N POR \u00cdTEM",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_credito": "8",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.131667",
+  "name": "BONIFICACI\u00d3N",
+  "nombre_notas_credito": "BONIFICACI\u00d3N",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_credito": "9",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Credito",
+  "modified": "2021-05-24 00:41:22.132983",
+  "name": "DISMINUCI\u00d3N EN EL VALOR",
+  "nombre_notas_credito": "DISMINUCI\u00d3N EN EL VALOR",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

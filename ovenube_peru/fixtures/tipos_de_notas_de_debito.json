@@ -1,0 +1,35 @@
+[
+ {
+  "codigo_notas_debito": "1",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Debito",
+  "modified": "2021-05-24 00:41:22.149328",
+  "name": "INTERESES POR MORA",
+  "nombre_notas_debito": "INTERESES POR MORA",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_debito": "2",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Debito",
+  "modified": "2021-05-24 00:41:22.151519",
+  "name": "AUMENTO DE VALOR",
+  "nombre_notas_debito": "AUMENTO DE VALOR",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_notas_debito": "3",
+  "docstatus": 0,
+  "doctype": "Tipos de Notas de Debito",
+  "modified": "2021-05-24 00:41:22.152841",
+  "name": "PENALIDADES",
+  "nombre_notas_debito": "PENALIDADES",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]

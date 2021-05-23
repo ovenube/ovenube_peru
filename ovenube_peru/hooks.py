@@ -11,6 +11,24 @@ app_color = "grey"
 app_email = "jespinoza@ovenube.com"
 app_license = "MIT"
 
+fixtures = [
+    "Catalogo de Existencias",
+    "Motivos de Traslado",
+    "Tipos de Documento de Identidad",
+    "Tipos de Transporte",
+    "Unidades de Medida",
+    "Tipos de Operaciones",
+    "Tipos de Existencia",
+    "Tipos de Transaccion Sunat",
+    "Tipos de Notas de Credito",
+    "Tipos de Notas de Debito",
+    "Tipos de Pago",
+    "Tipos de Comprobante",
+    "Translation",
+    "Custom Field",
+    "Custom Script"
+]
+
 # Includes in <head>
 # ------------------
 
@@ -55,7 +73,7 @@ app_license = "MIT"
 # ------------
 
 # before_install = "ovenube_peru.install.before_install"
-after_install = "ovenube_peru.install.after_install"
+# after_install = "ovenube_peru.install.after_install"
 
 # Desk Notifications
 # ------------------

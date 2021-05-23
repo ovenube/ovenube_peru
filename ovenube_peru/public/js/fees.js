@@ -6,34 +6,6 @@ cur_frm.add_fetch('razon_social', 'customer_primary_address', 'direccion');
 cur_frm.add_fetch('tipo_transaccion_sunat', 'codigo_tipo_transaccion', 'codigo_transaccion_sunat');
 cur_frm.add_fetch('tipo_nota_credito', 'codigo_notas_credito', 'codigo_nota_credito');
 
-function set_company_infomation(frm, cdt, cdn) {
-	switch(frm.doc.company) {
-        case "VIVENTIAL":
-            frappe.model.set_value(cdt, cdn, "naming_series", "FEEVNT-");
-	    	frappe.model.set_value(cdt, cdn, "receivable_account", "12121001 - Facturas, Boletas Por Cobrar PEN - VNT");
-	    	frappe.model.set_value(cdt, cdn, "income_account", "70410001 - Prestacion De Servicios a Terceros - VNT");	
-            break;
-		case "THE ENGLISH WALKER S.A.C.":
-			frappe.model.set_value(cdt, cdn, "naming_series", "FEETEW-");
-			frappe.model.set_value(cdt, cdn, "receivable_account", "12121001 - Facturas, Boletas Por Cobrar PEN - TEW");
-			frappe.model.set_value(cdt, cdn, "income_account", "70410001 - Prestacion De Servicios a Terceros - TEW");
-			break;
-		case "U-EDUCATION IQUITOS":
-			frappe.model.set_value(cdt, cdn, "naming_series", "FEEUEDIQT-");
-			frappe.model.set_value(cdt, cdn, "receivable_account", "12121001 - Facturas, Boletas Por Cobrar PEN - IQT");
-			frappe.model.set_value(cdt, cdn, "income_account", "70410001 - Prestacion De Servicios a Terceros - IQT");
-			break;
-		case "INSTITUTO SUPERIOR TECNOLOGICO ISABEL LA CATOLICA E.I.R.L.":
-			frappe.model.set_value(cdt, cdn, "naming_series", "FEEISC-");
-			frappe.model.set_value(cdt, cdn, "receivable_account", "12121001 - Facturas, Boletas Por Cobrar PEN - ISC");
-			frappe.model.set_value(cdt, cdn, "income_account", "70410001 - Prestacion De Servicios a Terceros - ISC");
-			break;
-		default:
-			frappe.model.set_value(cdt, cdn, "naming_series", "");
-			break;
-	}
-}
-
 function get_document_series(frm, cdt, cdn){
 	frappe.call({
 		type: "GET",
@@ -135,9 +107,6 @@ frappe.ui.form.on("Fees", {
 				window.open(frm.doc.enlace_pdf);
 			}, __("View"));
 			frm.page.set_inner_btn_group_as_primary(__("View"));
-		}
-		if (frm.doc.__islocal == 1){
-			set_company_infomation(frm, cdt, cdn);
 		}
 	},
 

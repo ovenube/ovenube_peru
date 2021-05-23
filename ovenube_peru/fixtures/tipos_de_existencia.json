@@ -1,0 +1,211 @@
+[
+ {
+  "codigo_tipos_existencia": "01",
+  "descripcion_tipos_existencia": "MERCADER\u00cdAS",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.390998",
+  "name": "MERCADER\u00cdAS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "02",
+  "descripcion_tipos_existencia": "PRODUCTOS TERMINADOS",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.393239",
+  "name": "PRODUCTOS TERMINADOS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "03",
+  "descripcion_tipos_existencia": "MATERIAS PRIMAS",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.394629",
+  "name": "MATERIAS PRIMAS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "04",
+  "descripcion_tipos_existencia": "ENVASES",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.396004",
+  "name": "ENVASES",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "05",
+  "descripcion_tipos_existencia": "MATERIALES AUXILIARES",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.397251",
+  "name": "MATERIALES AUXILIARES",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "06",
+  "descripcion_tipos_existencia": "SUMINISTROS ",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.398501",
+  "name": "SUMINISTROS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "07",
+  "descripcion_tipos_existencia": "REPUESTOS",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.399745",
+  "name": "REPUESTOS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "08",
+  "descripcion_tipos_existencia": "EMBALAJES",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.401002",
+  "name": "EMBALAJES",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "09",
+  "descripcion_tipos_existencia": "SUBPRODUCTOS ",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.402223",
+  "name": "SUBPRODUCTOS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "10",
+  "descripcion_tipos_existencia": "DESECHOS Y DESPERDICIOS",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.403493",
+  "name": "DESECHOS Y DESPERDICIOS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "91",
+  "descripcion_tipos_existencia": "OTROS 1",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.404718",
+  "name": "OTROS 1",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "92",
+  "descripcion_tipos_existencia": "OTROS 2",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.406027",
+  "name": "OTROS 2",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "93",
+  "descripcion_tipos_existencia": "OTROS 3",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.407266",
+  "name": "OTROS 3",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "94",
+  "descripcion_tipos_existencia": "OTROS 4",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.408602",
+  "name": "OTROS 4",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "95",
+  "descripcion_tipos_existencia": "OTROS 5",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.409902",
+  "name": "OTROS 5",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "96",
+  "descripcion_tipos_existencia": "OTROS 6",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.411167",
+  "name": "OTROS 6",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "97",
+  "descripcion_tipos_existencia": "OTROS 7",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.412434",
+  "name": "OTROS 7",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "98",
+  "descripcion_tipos_existencia": "OTROS 8",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.413658",
+  "name": "OTROS 8",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ },
+ {
+  "codigo_tipos_existencia": "99",
+  "descripcion_tipos_existencia": "OTROS",
+  "docstatus": 0,
+  "doctype": "Tipos de Existencia",
+  "modified": "2021-05-24 00:41:22.414962",
+  "name": "OTROS",
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null
+ }
+]
