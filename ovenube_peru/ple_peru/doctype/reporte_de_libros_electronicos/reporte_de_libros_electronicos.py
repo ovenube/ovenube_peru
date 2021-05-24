@@ -21,10 +21,14 @@ class ReportedeLibrosElectronicos(Utils):
 def make_jasper_report(reporte, from_date, to_date, tipo):
 	from_date = datetime.datetime.strptime(from_date, '%Y-%m-%d').strftime('%d/%m/%Y')
 	to_date = datetime.datetime.strptime(to_date, '%Y-%m-%d').strftime('%d/%m/%Y')
-	my_path = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
-	my_path = os.path.abspath(os.path.join(my_path, os.pardir))
-	input_file = os.path.dirname(my_path) + "/jasper_reports/" + reporte + ".jrxml"
-	output = os.path.dirname(my_path) + '/reportes/' + tipo.lower() + "_" + str(datetime.datetime.now())
+	path = os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir))
+	path = os.path.abspath(os.path.join(path, os.pardir))
+	input_file = os.path.dirname(path) + "/jasper_reports/" + reporte + ".jrxml"
+
+	report_path = frappe.get_site_path('public', 'files') + "/reportes/"
+	if not os.path.isdir(report_path):
+		os.makedirs(report_path)
+	output = os.path.dirname(report_path) + tipo.lower() + "_" + str(datetime.datetime.now())
 	con = {
 		'driver': 'mysql',
 		'username': frappe.conf.get("db_name"),
