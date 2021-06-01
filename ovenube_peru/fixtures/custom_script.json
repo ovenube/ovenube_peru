@@ -2,28 +2,6 @@
  {
   "docstatus": 0,
   "doctype": "Custom Script",
-  "dt": "Student Applicant",
-  "modified": "2021-05-23 14:55:59.489618",
-  "name": "Student Applicant-Client",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "script": "frappe.ui.form.on('Student Applicant', 'tdx_c_marcartotal', function(frm, cdt, cdn){\n    set_calcular(frm);\n})\n//calcular monto total\nvar set_calcular = function(frm){\n    var calcular;\n\tif(frm.doc.tdx_c_ncuotas = 19){\n\t\tcalcular = 7 * (frm.doc.tdx_c_cuota + frm.doc.tdx_c_materiales) + 4 * (frm.doc.tdx_c_cuota + frm.doc.tdx_c_materiales + frm.doc.tdx_c_incremento) + 4 * (frm.doc.tdx_c_cuota + frm.doc.tdx_c_materiales + frm.doc.tdx_c_incremento * 3) + 4 * (frm.doc.tdx_c_cuota + frm.doc.tdx_c_incremento * 4) + frm.doc.tdx_c_materialesie + frm.doc.tdx_c_membresiav;\n\n\t}\n    frm.set_value('tdx_c_total', calcular);\n    frm.refresh();\n}\n\n"
- },
- {
-  "docstatus": 0,
-  "doctype": "Custom Script",
-  "dt": "Student Group",
-  "modified": "2018-10-31 17:57:40.123920",
-  "name": "Student Group-Client",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "script": "frappe.ui.form.on('Student Group', 'validate', function(frm){\nset_nombre(frm);\n})\nfrappe.ui.form.on('Student Group Instructor', 'instructor', function(frm, cdt, cdn){\nset_instructor(frm);\n})\n//Instructor\nvar set_instructor = function(frm){\nvar tinstructor=\"\";\n$.each(frm.doc.instructors, function(i, row){\ntinstructor += row.instructor;\n})\nfrm.set_value('tdx_c_intructor', tinstructor);\nfrm.refresh();\n}\n//Nombre \nvar set_nombre = function(frm){\nvar tnombre=\"\";\n\ntnombre = frm.doc.course + \"-\" + frm.doc.tdx_c_aulan + \"-\" + frm.doc.tdx_c_turno + \"-\" + frm.doc.tdx_c_intructor + \"-\" + frm.doc.tdx_c_a\u00f1o + \"-\" + frm.doc.tdx_c_mes + \"-\" + frm.doc.company;\n\nfrm.set_value('student_group_name', tnombre);\nfrm.refresh();\n}\n\n//Buscadores\ncur_frm.add_fetch(\"tdx_c_aula\", \"room_name\", \"tdx_c_aulan\");\n"
- },
- {
-  "docstatus": 0,
-  "doctype": "Custom Script",
   "dt": "Material Request",
   "modified": "2019-03-28 13:14:33.495335",
   "name": "Material Request-Client",
@@ -75,17 +53,6 @@
   "parentfield": null,
   "parenttype": null,
   "script": "cur_frm.add_fetch('tdx_c_codigo','tdx_c_comportamiento','tdx_c_comportamiento');\ncur_frm.add_fetch('tdx_c_codigo','tdx_c_tipofluido','tdx_c_tipofluido');\n\ncur_frm.add_fetch('tdx_c_codigorp','item_name','tdx_c_nombre');\ncur_frm.add_fetch('tdx_c_codigorp','brand','tdx_c_marca');"
- },
- {
-  "docstatus": 0,
-  "doctype": "Custom Script",
-  "dt": "Fees",
-  "modified": "2021-05-23 15:06:15.656626",
-  "name": "Fees-Client",
-  "parent": null,
-  "parentfield": null,
-  "parenttype": null,
-  "script": "function set_company_infomation(frm, cdt, cdn) {\n\tswitch(frm.doc.company) {\n        case \"VIVENTIAL\":\n            frappe.model.set_value(cdt, cdn, \"naming_series\", \"FEEVNT-\");\n\t    \tfrappe.model.set_value(cdt, cdn, \"receivable_account\", \"12121001 - Facturas, Boletas Por Cobrar PEN - VNT\");\n\t    \tfrappe.model.set_value(cdt, cdn, \"income_account\", \"70410001 - Prestacion De Servicios a Terceros - VNT\");\t\n            break;\n\t\tcase \"THE ENGLISH WALKER S.A.C.\":\n\t\t\tfrappe.model.set_value(cdt, cdn, \"naming_series\", \"FEETEW-\");\n\t\t\tfrappe.model.set_value(cdt, cdn, \"receivable_account\", \"12121001 - Facturas, Boletas Por Cobrar PEN - TEW\");\n\t\t\tfrappe.model.set_value(cdt, cdn, \"income_account\", \"70410001 - Prestacion De Servicios a Terceros - TEW\");\n\t\t\tbreak;\n\t\tcase \"U-EDUCATION IQUITOS\":\n\t\t\tfrappe.model.set_value(cdt, cdn, \"naming_series\", \"FEEUEDIQT-\");\n\t\t\tfrappe.model.set_value(cdt, cdn, \"receivable_account\", \"12121001 - Facturas, Boletas Por Cobrar PEN - IQT\");\n\t\t\tfrappe.model.set_value(cdt, cdn, \"income_account\", \"70410001 - Prestacion De Servicios a Terceros - IQT\");\n\t\t\tbreak;\n\t\tcase \"INSTITUTO SUPERIOR TECNOLOGICO ISABEL LA CATOLICA E.I.R.L.\":\n\t\t\tfrappe.model.set_value(cdt, cdn, \"naming_series\", \"FEEISC-\");\n\t\t\tfrappe.model.set_value(cdt, cdn, \"receivable_account\", \"12121001 - Facturas, Boletas Por Cobrar PEN - ISC\");\n\t\t\tfrappe.model.set_value(cdt, cdn, \"income_account\", \"70410001 - Prestacion De Servicios a Terceros - ISC\");\n\t\t\tbreak;\n\t\tdefault:\n\t\t\tfrappe.model.set_value(cdt, cdn, \"naming_series\", \"\");\n\t\t\tbreak;\n\t}\n}\n\nfrappe.ui.form.on('Fees', {\n\trefresh: function(frm, cdt, cdn) {\n\t\tif (frm.doc.__islocal == 1){\n\t\t\tset_company_infomation(frm, cdt, cdn);\n\t\t}\n\t}\n});"
  },
  {
   "docstatus": 0,

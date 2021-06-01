@@ -298,6 +298,8 @@ def send_document(company, invoice, doctype):
                         })
                 elif doctype == "Delivery Note":
                     doc = frappe.get_doc("Delivery Note", invoice)
+                    if not doc.customer_address or not doc.transporter or not doc.driver:
+                        frappe.throw("Data is missing, please check")
                     doc_transportista = get_doc_transportista(doc.transporter)
                     doc_conductor = get_doc_conductor(doc.driver)
                     company_address = customer_address = {}

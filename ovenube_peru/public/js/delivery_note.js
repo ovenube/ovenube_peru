@@ -62,10 +62,6 @@ frappe.ui.form.on("Delivery Note", {
 	},
 
     before_submit: function(frm, cdt, cdn) {
-		if(!frm.doc.customer_address || !frm.doc.transporter || ! frm.doc.driver){
-            frappe.validated = false;
-            frappe.throw("Data is missing, please check");
-        }
         if (frm.doc.estado_sunat == null || frm.doc.is_return == 1) {
             return new Promise(function(resolve, reject) {
 				frappe.call({
