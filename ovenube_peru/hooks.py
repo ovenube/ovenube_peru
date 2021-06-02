@@ -51,6 +51,7 @@ doctype_js = {
     "Company": "public/js/company.js",
     "Customer": "public/js/customer.js",
     "Supplier": "public/js/supplier.js",
+    "Driver": "public/js/driver.js",
     "Delivery Note": "public/js/delivery_note.js",
     "Fees": "public/js/fees.js",
     "Item": "public/js/item.js",
