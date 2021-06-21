@@ -122,6 +122,9 @@ doc_events = {
 	},
     "Payment Entry": {
         "before_submit": "ovenube_peru.nubefact_integration.facturacion_electronica.send_fees_invoice"
+    },
+    "Sales Order": {
+        "validate": "ovenube_peru.nubefact_integration.utils.set_amount_billed"
     }
 }
 

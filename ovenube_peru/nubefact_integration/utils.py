@@ -139,3 +139,7 @@ def get_serie_online(company, doc_serie):
         if doc_serie in serie:
             online = True
     return online
+
+def set_amount_billed(doc, method=None):
+    if doc.per_billed:
+        doc.amount_billed = doc.per_billed * doc.grand_total
