@@ -195,7 +195,7 @@ frappe.ui.form.on("Sales Invoice", {
 	},
 
     before_submit: function(frm, cdt, cdn) {
-		if(!frm.doc.customer_address && frm.doc.codigo_tipo_documento != "-"){
+		if(!frm.doc.customer_address && frm.doc.codigo_tipo_documento == "6" ){
             frappe.validated = false;
             frappe.throw("Customer Address is missing");
         }
@@ -252,14 +252,49 @@ frappe.ui.form.on("Sales Invoice", {
 		if (frm.doc.is_return == 1) {
 			get_document_series(frm, cdt, cdn);
 		}
+
 		if (frm.doc.__islocal == 1){
+			frappe.model.set_value(cdt, cdn, "estado_sunat", "");
+			frappe.model.set_value(cdt, cdn, "respuesta_sunat", "");
+
 			if (frm.doc.customer){
 				get_document_customer(frm, cdt, cdn);
 			}			
 		}
-		if (frm.doc.__islocal == 1){
-			frappe.model.set_value(cdt, cdn, "estado_sunat", "");
-			frappe.model.set_value(cdt, cdn, "respuesta_sunat", "");
+
+		if (frm.doc.status === 'Draft') {
+			frm.add_custom_button(__('Buscar por DNI/RUC'), function () {
+				frappe.prompt(
+					[{'fieldname': 'tax_id', 'fieldtype': 'Data', 'label': 'DNI, RUC del cliente', 'reqd': 0}],
+					function (values) {
+						if (values.tax_id && values.tax_id.length) {
+							frappe.call({
+								method: "ovenube_peru.nubefact_integration.doctype.api_consultas.api_consultas.get_party",
+								args: {
+									company: frm.doc.company,
+									tax_id: values.tax_id,
+                                    party_type: "Customer"
+								},
+								callback: function(r) {
+									if (r.message) {
+										frm.set_value("customer", r.message);
+										frm.refresh_fields();
+									}
+									else {
+										frappe.msgprint("El cliente no pudo ser encontrado, revise el número de documento");
+									}
+								},
+								async: false
+							});
+						}
+						else {
+							frappe.throw("Debe ingresar un número de documento");
+						}
+					},
+					'Consultar Cliente',
+					'Aceptar'
+				)
+			}, __(""));
 		}
 	},
 

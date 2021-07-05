@@ -48,6 +48,8 @@ fixtures = [
 # include js in doctype views
 doctype_js = {
     "Sales Invoice" : "public/js/sales_invoice.js",
+    "Sales Order": "public/js/sales_order.js",
+    "Quotation": "public/js/quotation.js",
     "Company": "public/js/company.js",
     "Customer": "public/js/customer.js",
     "Supplier": "public/js/supplier.js",
@@ -149,11 +151,26 @@ scheduler_events = {
 # 	]
     "cron": {
         "30 0 * * *":[
-            "nubefact_integration.tasks.daily"
+            "ovenube_peru.tasks.daily"
         ],
         "30 12 * * *":[
-            "nubefact_integration.tasks.daily"
+            "ovenube_peru.tasks.daily"
         ],
+        "0 8 * * *":[
+            "ovenube_peru.nubefact_integration.doctype.api_consultas.api_consultas.get_exchange_rate"
+        ],
+        "30 8 * * *":[
+            "ovenube_peru.nubefact_integration.doctype.api_consultas.api_consultas.get_exchange_rate"
+        ],
+        "0 9 * * *":[
+            "ovenube_peru.nubefact_integration.doctype.api_consultas.api_consultas.get_exchange_rate"
+        ],
+        "30 9 * * *":[
+            "ovenube_peru.nubefact_integration.doctype.api_consultas.api_consultas.get_exchange_rate"
+        ],
+        "0 10 * * *":[
+            "ovenube_peru.nubefact_integration.adoctype.pi_consultas.api_consultas.get_exchange_rate"
+        ]
     }
 }
 
