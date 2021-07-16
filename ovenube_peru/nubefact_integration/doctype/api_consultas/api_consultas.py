@@ -101,6 +101,7 @@ def get_party(company, tax_id, party_type):
 					party = frappe.get_doc({
 						'doctype': party_type,
 						'party_name': party_info['nombre_o_razon_social'],
+						party_type.lower() + '_name': party_info['nombre_o_razon_social'],
 						'tax_id': party_info['ruc'],
 						'tipo_documento_identidad': 'REGISTRO ÚNICO DE CONTRIBUYENTES',
 						'codigo_tipo_documento': '6'
@@ -153,6 +154,7 @@ def get_party(company, tax_id, party_type):
 					party = frappe.get_doc({
 						'doctype': party_type,
 						'party_name': party_info['nombre_completo'],
+						party_type + '_name': party_info['nombre_completo'],
 						'tax_id': party_info['dni'],
 						'tipo_documento_identidad': 'DOCUMENTO NACIONAL DE IDENTIDAD (DNI)',
 						'codigo_tipo_documento': '1',
