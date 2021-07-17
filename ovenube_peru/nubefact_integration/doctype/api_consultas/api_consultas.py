@@ -103,7 +103,7 @@ def get_party(company, tax_id, party_type):
 						'party_name': party_info['nombre_o_razon_social'],
 						party_type.lower() + '_name': party_info['nombre_o_razon_social'],
 						'tax_id': party_info['ruc'],
-						'tipo_documento_identidad': 'REGISTRO ÚNICO DE CONTRIBUYENTES',
+						'tipo_documento_identidad' if party_type == 'Customer' else 'nombre_tipo_documento': 'REGISTRO ÚNICO DE CONTRIBUYENTES',
 						'codigo_tipo_documento': '6'
 					})
 					party.save()
@@ -156,7 +156,7 @@ def get_party(company, tax_id, party_type):
 						'party_name': party_info['nombre_completo'],
 						party_type + '_name': party_info['nombre_completo'],
 						'tax_id': party_info['dni'],
-						'tipo_documento_identidad': 'DOCUMENTO NACIONAL DE IDENTIDAD (DNI)',
+						'tipo_documento_identidad' if party_type == 'Customer' else 'nombre_tipo_documento': 'DOCUMENTO NACIONAL DE IDENTIDAD (DNI)',
 						'codigo_tipo_documento': '1',
 						'party_type': 'Individual'
 					})
