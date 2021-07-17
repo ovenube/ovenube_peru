@@ -154,7 +154,7 @@ def get_party(company, tax_id, party_type):
 					party = frappe.get_doc({
 						'doctype': party_type,
 						'party_name': party_info['nombre_completo'],
-						party_type + '_name': party_info['nombre_completo'],
+						party_type.lower() + '_name': party_info['nombre_completo'],
 						'tax_id': party_info['dni'],
 						'tipo_documento_identidad' if party_type == 'Customer' else 'nombre_tipo_documento': 'DOCUMENTO NACIONAL DE IDENTIDAD (DNI)',
 						'codigo_tipo_documento': '1',
