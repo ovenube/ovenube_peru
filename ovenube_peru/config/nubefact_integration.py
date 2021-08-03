@@ -13,10 +13,16 @@ def get_data():
                     "description": _("Configura la conexión con Nubefact"),
 					"onboard": 1,
                 },
-				 {
+				{
                     "type": "doctype",
                     "name": "Configuracion Nubefact",
                     "description": _("Configura los numeros de serie y productos para el uso de la facturacion electronica"),
+					"onboard": 1,
+                },
+				{
+                    "type": "doctype",
+                    "name": "API Consultas",
+                    "description": _("Configura la consulta de DNI/RUC/TC"),
 					"onboard": 1,
                 }
             ]

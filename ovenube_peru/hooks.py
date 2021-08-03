@@ -65,7 +65,10 @@ doctype_js = {
     "Supplier": "public/js/supplier.js",
     "UOM": "public/js/uom.js",
 }
-# doctype_list_js = {"doctype" : "public/js/doctype_list.js"}
+
+doctype_list_js = {
+    "Currency Exchange" : "public/js/currency_exchange_list.js"
+}
 # doctype_tree_js = {"doctype" : "public/js/doctype_tree.js"}
 # doctype_calendar_js = {"doctype" : "public/js/doctype_calendar.js"}
 
@@ -169,7 +172,7 @@ scheduler_events = {
             "ovenube_peru.nubefact_integration.doctype.api_consultas.api_consultas.get_exchange_rate"
         ],
         "0 10 * * *":[
-            "ovenube_peru.nubefact_integration.adoctype.pi_consultas.api_consultas.get_exchange_rate"
+            "ovenube_peru.nubefact_integration.doctype.api_consultas.api_consultas.get_exchange_rate"
         ]
     }
 }

@@ -34,15 +34,15 @@ def get_exchange_rate():
 	}
 
 	tipo_cambio = frappe.get_all("Currency Exchange", filters={
-		'date': datetime.datetime.now().strftime('%d-%m-%Y'),
+		'date': datetime.datetime.now().strftime('%Y-%m-%d'),
 		'from_currency': "USD",
 		'to_currency': 'PEN'}
 	)
 
 	if tipo_cambio == []:
-		authentication = frappe.get_all('API Consultas')
+		authentication = frappe.get_all('API Consultas', fields=['ruta','token'])
 		if authentication:
-			url = authentication[0].get('url')
+			url = authentication[0].get('ruta')
 			token = authentication[0].get('token')
 
 			response = requests.post(url, headers=headers, data=json.dumps({
@@ -58,21 +58,34 @@ def get_exchange_rate():
 			if tipo_cambio_info['success']:
 				tipo_cambio = frappe.get_doc({
 					'doctype': 'Currency Exchange',
-					'date': datetime.datetime.now().strftime('%d-%m-%Y'),
+					'date': datetime.datetime.now().strftime('%Y-%m-%d'),
 					'from_currency': "USD",
 					'to_currency': 'PEN',
-					'exchange_rate': tipo_cambio_info['exchange_rates']['venta'],
-					'tdx_c_compra': tipo_cambio_info['exchange_rates']['compra'],
+					'exchange_rate': tipo_cambio_info['exchange_rates'][0]['venta'],
+					'tdx_c_compra': tipo_cambio_info['exchange_rates'][0]['compra'],
 					"for_buying": 1,
 					"for_selling": 1
 				})
 
 				tipo_cambio.save()
+			return {
+				"success": True,
+				"msg": "T/C creado Satisfactoriamente"
+			}
+	else:
+		return {
+			"success": True,
+			"msg": "T/C ya existe"
+		}
+	return {
+		"success": False,
+		"msg": "Error al momento de crear el T/C. Intente nuevamente más tarde"
+	}
 
 @frappe.whitelist()
 def get_party(company, tax_id, party_type):
 	try:
-		party = frappe.get_all(party_type, filters={'tax_id': tax_id})
+		party = frappe.get_all(party_type, filters={'tax_id': tax_id}, fields=['ruta','token'])
 
 		if party == []:
 			authentication = frappe.get_doc('API Consultas', company)
