@@ -1,0 +1,161 @@
+
+version: '3'
+
+services:
+  redis-cache:
+    image: redis:latest
+    restart: on-failure
+    volumes:
+      - redis-cache-vol:/data
+
+  redis-queue:
+    image: redis:latest
+    restart: on-failure
+    volumes:
+      - redis-queue-vol:/data
+
+  redis-socketio:
+    image: redis:latest
+    restart: on-failure
+    volumes:
+      - redis-socketio-vol:/data
+
+  mariadb:
+    image: mariadb:10.3
+    restart: on-failure
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    volumes:
+      - ./frappe-mariadb.cnf:/etc/mysql/conf.d/frappe.cnf
+      - mariadb-vol:/var/lib/mysql
+
+  ovenube-assets:
+    image: ovenube-assets
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: ovenube-nginx
+    restart: on-failure
+    environment:
+      - FRAPPE_PY=ovenube-python
+      - FRAPPE_PY_PORT=8000
+      - FRAPPE_SOCKETIO=frappe-socketio
+      - SOCKETIO_PORT=9000
+      - LETSENCRYPT_HOST=ovenube.localhost
+      - VIRTUAL_HOST=ovenube.localhost
+      - LETSENCRYPT_EMAIL=carlos_jcez@hotmail.com
+    ports:
+      - 8080:80
+    depends_on:
+      - ovenube-python
+      - frappe-socketio
+      - frappe-worker-default
+      - frappe-worker-long
+      - frappe-worker-short
+    links:
+      - ovenube-python
+      - frappe-socketio
+      - frappe-worker-default
+      - frappe-worker-long
+      - frappe-worker-short
+    volumes:      
+      - sites-vol:/var/www/html/sites:rw
+      - assets-vol:/assets:rw
+
+  ovenube-python:
+    image: ovenube-worker
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: ovenube-worker
+    restart: on-failure
+    environment:
+      - MARIADB_HOST=mariadb
+      - REDIS_CACHE=redis-cache:6379
+      - REDIS_QUEUE=redis-queue:6379
+      - REDIS_SOCKETIO=redis-socketio:6379
+      - SOCKETIO_PORT=9000
+    volumes:
+      - sites-vol:/home/frappe/frappe-bench/sites:rw
+      - logs-vol:/home/frappe/frappe-bench/logs:rw
+      - assets-vol:/home/frappe/frappe-bench/sites/assets:rw
+
+  frappe-socketio:
+    image: frappe/frappe-socketio:version-12
+    restart: on-failure
+    depends_on:
+      - redis-socketio
+    links:
+      - redis-socketio
+    volumes:
+      - sites-vol:/home/frappe/frappe-bench/sites:rw
+      - logs-vol:/home/frappe/frappe-bench/logs:rw
+
+  frappe-worker-default:
+    image: ovenube-worker
+    restart: on-failure
+    command: worker
+    depends_on:
+      - redis-queue
+      - redis-cache
+    links:
+      - redis-queue
+      - redis-cache
+    volumes:
+      - sites-vol:/home/frappe/frappe-bench/sites:rw
+      - logs-vol:/home/frappe/frappe-bench/logs:rw
+
+  frappe-worker-short:
+    image: ovenube-worker
+    restart: on-failure
+    command: worker
+    environment:
+      - WORKER_TYPE=short
+    depends_on:
+      - redis-queue
+      - redis-cache
+    links:
+      - redis-queue
+      - redis-cache
+    volumes:
+      - sites-vol:/home/frappe/frappe-bench/sites:rw
+      - logs-vol:/home/frappe/frappe-bench/logs:rw
+
+  frappe-worker-long:
+    image: ovenube-worker
+    restart: on-failure
+    command: worker
+    environment:
+      - WORKER_TYPE=long
+    depends_on:
+      - redis-queue
+      - redis-cache
+    links:
+      - redis-queue
+      - redis-cache
+    volumes:
+      - sites-vol:/home/frappe/frappe-bench/sites:rw
+      - logs-vol:/home/frappe/frappe-bench/logs:rw
+
+  frappe-schedule:
+    image: ovenube-worker
+    restart: on-failure
+    command: schedule
+    depends_on:
+      - redis-queue
+      - redis-cache
+    links:
+      - redis-queue
+      - redis-cache
+    volumes:
+      - sites-vol:/home/frappe/frappe-bench/sites:rw
+      - logs-vol:/home/frappe/frappe-bench/logs:rw
+
+volumes:
+  mariadb-vol:
+  redis-cache-vol:
+  redis-queue-vol:
+  redis-socketio-vol:
+  assets-vol:
+  sites-vol:
+  logs-vol:
