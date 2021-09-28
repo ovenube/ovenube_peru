@@ -1,17 +1,19 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import unicode_literals
+from os import truncate
 import frappe
 from ovenube_peru.nubefact_integration.doctype.autenticacion_nubefact.autenticacion_nubefact import get_autentication, get_url
 from ovenube_peru.nubefact_integration.doctype.configuracion_nubefact.configuracion_nubefact import get_cuentas_bancarias, get_doc_serie
 from ovenube_peru.nubefact_integration.utils import *
 from ovenube_peru.nubefact_integration.doctype.tipos_de_transaccion_sunat.tipos_de_transaccion_sunat import get_tipo_transaccion, get_tipo_transaccion_fee
 from erpnext.controllers.taxes_and_totals import get_plastic_bags_information
-from frappe import utils
+from frappe.utils.data import add_to_date
 
 import requests
 import json
 import datetime
+import re
 
 @frappe.whitelist()
 def send_document(company, invoice, doctype):
@@ -194,13 +196,22 @@ def send_document(company, invoice, doctype):
                             "enviar_automaticamente_al_cliente": "false",
                             "codigo_unico": "",
                             "condiciones_de_pago": doc.payment_terms_template,
-                            "medio_de_pago": "",
+                            "medio_de_pago": "" if doc.condicion_pago == 'CONTADO' else "credito",
                             "placa_vehiculo": "",
                             "orden_compra_servicio": doc.po_no if doc.doctype == "Sales Invoice" else "",
                             "tabla_personalizada_codigo": "",
                             "formato_de_pdf": "",
                             "total_impuestos_bolsas": str(round(monto_ibp, 2) * multi) if monto_ibp != 0 else ""
-                    }
+                    }                    
+
+                    if doc.condicion_pago != 'CONTADO':
+                        periodo = re.findall(r'\d+', doc.condicion_pago)
+                        content['venta_al_credito'] = {
+                            "cuota": 1,
+                            "fecha_de_pago": add_to_date(None, days=int(periodo[0])).strftime('%d-%m-%Y'),
+                            "importe": content['total']
+                        }
+
                     content['items'] = []
                     if doc.codigo_transaccion_sunat == "4":
                         if doc.sales_invoice_advance:
@@ -286,7 +297,7 @@ def send_document(company, invoice, doctype):
                                 "cantidad": str(item.qty * multi),
                                 "valor_unitario": str(round(item.unit_value, 4)) if (item.unit_value > 0) else str(round(item.net_rate, 4)),
                                 "precio_unitario": str(round(precio_unitario, 2)),
-                                "descuento": str(round(item.discount_amount, 2)) if (item.discount_amount > 0) else "",
+                                "descuento": "",
                                 "subtotal": str(round(item.free_amount, 2) * multi) if (item.unit_value > 0) else str(round(item.net_amount, 2) * multi),
                                 "tipo_de_igv": tipo_igv,
                                 "igv": str(round(item.net_amount * igv / 100, 2) * multi) if doc.total_taxes_and_charges else "0",
