@@ -202,13 +202,17 @@ def send_document(company, invoice, doctype):
                             "tabla_personalizada_codigo": "",
                             "formato_de_pdf": "",
                             "total_impuestos_bolsas": str(round(monto_ibp, 2) * multi) if monto_ibp != 0 else ""
-                    }                    
+                    }
 
-                    if doc.condicion_pago != 'CONTADO':
-                        periodo = re.findall(r'\d+', doc.condicion_pago)
+                    condicion_pago = re.findall(r'\d+', doc.condicion_pago)
+                    try:
+                        periodo = int(condicion_pago[0])
+                    except:
+                        print(f'Condicion de pago: {condicion_pago}')
+                    else:
                         content['venta_al_credito'] = {
                             "cuota": 1,
-                            "fecha_de_pago": add_to_date(None, days=int(periodo[0])).strftime('%d-%m-%Y'),
+                            "fecha_de_pago": add_to_date(None, days=periodo).strftime('%d-%m-%Y'),
                             "importe": content['total']
                         }
 
