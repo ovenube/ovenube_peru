@@ -204,17 +204,25 @@ def send_document(company, invoice, doctype):
                             "total_impuestos_bolsas": str(round(monto_ibp, 2) * multi) if monto_ibp != 0 else ""
                     }
 
-                    condicion_pago = re.findall(r'\d+', doc.condicion_pago)
-                    try:
-                        periodo = int(condicion_pago[0])
-                    except:
-                        print(f'Condicion de pago: {condicion_pago}')
+                    cuotas = []
+
+                    if len(doc.payment_schedule) == 1:
+                        condicion_pago = re.findall(r'\d+', doc.condicion_pago)
+                        if condicion_pago:
+                            if condicion_pago[0].isnumeric():
+                                cuotas.append({ 
+                                    "cuota": 1,
+                                    "fecha_de_pago": add_to_date(None, days=int(condicion_pago[0])).strftime('%d-%m-%Y'),
+                                    "importe": doc.total_general if doc.tdx_c_checkspot == 1 else doc.grand_total
+                                })
                     else:
-                        content['venta_al_credito'] = {
-                            "cuota": 1,
-                            "fecha_de_pago": add_to_date(None, days=periodo).strftime('%d-%m-%Y'),
-                            "importe": content['total']
-                        }
+                        for payment in doc.payment_schedule:
+                            cuotas.append({ 
+                                "cuota": len(cuotas) + 1,
+                                "fecha_de_pago": payment.due_date.strftime('%d-%m-%Y'),
+                                "importe": payment.payment_amount
+                            })                       
+                    content['venta_al_credito'] = cuotas
 
                     content['items'] = []
                     if doc.codigo_transaccion_sunat == "4":

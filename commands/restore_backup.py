@@ -26,7 +26,7 @@ from utils import (
 
 def get_backup_dir():
     return os.path.join(
-        os.path.expanduser('~'),
+        '/home/frappe',
         'backups'
     )
 
@@ -147,7 +147,7 @@ def pull_backup_from_s3():
                 print('Downloading {}'.format(backup_file))
                 bucket.download_file(bucket_dir + '/' + backup_file, backup_file)
 
-    os.chdir(os.path.join(os.path.expanduser('~'), 'frappe-bench', 'sites'))
+    os.chdir(os.path.join('/home/frappe', 'frappe-bench', 'sites'))
 
 
 def restore_postgres(config, site_config, database_file):
@@ -209,8 +209,8 @@ def restore_mariadb(config, site_config, database_file):
 
     db_root_user = os.environ.get("DB_ROOT_USER", 'root')
 
-    db_host = site_config.get('db_host', config.get('db_host'))
-    db_port = site_config.get('db_port', config.get('db_port', 3306))
+    db_host = config.get('db_host')
+    db_port = config.get('db_port', 3306)
     db_name = site_config.get('db_name')
     db_password = site_config.get('db_password')
 
